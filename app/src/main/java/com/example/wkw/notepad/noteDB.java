@@ -12,6 +12,8 @@ public class NoteDB extends SQLiteOpenHelper {
 
     public static final String TABLE_NAME = "NOTES";
     public static final String CONTENT = "CONTENT";
+    public static final String IMAGE = "IMAGE";
+    public static final String VIDEO = "VIDEO";
     public static final String ID = "_ID";
     public static final String TIME = "TIME";
 
@@ -23,7 +25,8 @@ public class NoteDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE " + TABLE_NAME + "" +
                 "(" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
-                CONTENT + " TEXT NOT NULL," + TIME + " TEXT NOT NULL)");
+                CONTENT + " TEXT NOT NULL," + IMAGE + " TEXT NOT NULL," +
+                VIDEO + " TEXT NOT NULL," + TIME + " TEXT NOT NULL" + ")");
     }
 
     @Override
